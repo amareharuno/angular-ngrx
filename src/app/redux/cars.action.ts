@@ -8,8 +8,6 @@ export namespace CAR_ACTON {
 export class AddCar implements Action {
   readonly type = CAR_ACTON.ADD_CAR;
 
-
   constructor(public payload: Car) {
-    // this.payload = payload;
   }
 }
