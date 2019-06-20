@@ -1,6 +1,8 @@
 <div class="form-group">
-  <label for="car-name">Email address</label>
+  <label for="car-name">Car Name</label>
   <input class="form-control"
+         type="text"
+         [(ngModel)]="carName"
          id="car-name"
          aria-describedby="carNameHelp"
          placeholder="Car Name">
@@ -8,14 +10,26 @@
 </div>
 
 <div class="form-group">
-  <label for="car-model">Email address</label>
+  <label for="car-model">Car Model</label>
   <input class="form-control"
+         type="text"
+         [(ngModel)]="carModel"
          id="car-model"
          aria-describedby="carModelHelp"
-         placeholder="Car Name">
+         placeholder="Car Model">
   <small id="carModelHelp" class="form-text text-muted">Enter car model.</small>
 </div>
 
-<button type="button" class="btn btn-outline-primary mr-2">Add Car</button>
-<button type="button" class="btn btn-outline-warning">Load Cars</button>
+<button type="button"
+        class="btn btn-outline-primary mr-2"
+        (click)="onAdd()"
+>
+  Add Car
+</button>
+<button type="button"
+        class="btn btn-outline-warning"
+        (click)="onLoad()"
+>
+  Load Cars
+</button>
 
