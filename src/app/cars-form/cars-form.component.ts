@@ -1,9 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Store} from '@ngrx/store';
 import * as moment from 'moment';
 import {Car} from '../car.model';
-import {AppState} from '../redux/app.state';
-import {AddCar} from '../redux/cars.action';
 import {CarsService} from '../cars.service';
 
 @Component({
@@ -13,12 +10,10 @@ import {CarsService} from '../cars.service';
 })
 export class CarsFormComponent implements OnInit {
 
-  private id = 2;
-
   carName = '';
   carModel = '';
 
-  constructor(private store: Store<AppState>, private carsService: CarsService) {
+  constructor(private carsService: CarsService) {
   }
 
   ngOnInit() {
@@ -29,17 +24,9 @@ export class CarsFormComponent implements OnInit {
       return;
     }
 
-    this.id = ++this.id;
-
-    const car = new Car(
-      this.carName,
-      moment().format('DD.MM.YY'),
-      this.carModel,
-      false,
-      this.id
-    );
-
-    this.store.dispatch(new AddCar(car));
+    const date = moment().format('DD.MM.YY');
+    const car = new Car(this.carName, date, this.carModel);
+    this.carsService.addCar(car);
 
     this.carName = '';
     this.carModel = '';
