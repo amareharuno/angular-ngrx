@@ -2,24 +2,31 @@
   "cars": [
     {
       "id": 1,
-      "name": "Ford",
-      "date": "12.12.06",
-      "model": "Mondeo",
-      "isSold": false
-    },
-    {
-      "id": 1,
       "name": "Audi",
       "date": "04.05.12",
       "model": "RX6",
       "isSold": false
     },
     {
-      "name": "d",
+      "name": "Test",
       "date": "21.06.19",
-      "model": "d",
-      "isSold": false,
+      "model": "Test",
+      "isSold": true,
       "id": 2
+    },
+    {
+      "name": "Ford",
+      "date": "21.06.19",
+      "model": "Focus",
+      "isSold": false,
+      "id": 3
+    },
+    {
+      "name": "Ford",
+      "date": "21.06.19",
+      "model": "2",
+      "isSold": false,
+      "id": 4
     }
   ]
 }
