@@ -1,11 +1,7 @@
-import {Car} from '../car.model';
 import {CAR_ACTON, CarsAction} from './cars.action';
 
 const initialState = {
-  cars: [
-    new Car('Ford', '12.12.12', 'Focus', false, 1),
-    new Car('Audi', '08.08.12', 'A4', false, 2)
-  ]
+  cars: []
 };
 
 export function carsReducer(state = initialState, action: CarsAction) {
@@ -18,6 +14,8 @@ export function carsReducer(state = initialState, action: CarsAction) {
       const index = state.cars.findIndex(car => car.id === action.payload.id);
       state.cars[index].isSold = true;
       return {...state, cars: [...state.cars]};
+    case CAR_ACTON.LOAD_CARS:
+      return {...state, cars: [...action.payload]};
     default:
       return state;
   }
