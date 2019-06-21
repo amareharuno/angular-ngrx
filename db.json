@@ -8,25 +8,25 @@
       "isSold": false
     },
     {
-      "name": "Test",
-      "date": "21.06.19",
-      "model": "Test",
-      "isSold": true,
-      "id": 2
-    },
-    {
       "name": "Ford",
       "date": "21.06.19",
-      "model": "Focus",
+      "model": "Mondeo",
       "isSold": false,
-      "id": 3
+      "id": 6
     },
     {
-      "name": "Ford",
+      "name": "1",
       "date": "21.06.19",
-      "model": "2",
+      "model": "1",
       "isSold": false,
-      "id": 4
+      "id": 7
+    },
+    {
+      "name": "car",
+      "date": "21.06.19",
+      "model": "car",
+      "isSold": false,
+      "id": 8
     }
   ]
 }
