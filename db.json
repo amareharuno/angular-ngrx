@@ -1,32 +1,18 @@
 {
   "cars": [
     {
-      "id": 1,
-      "name": "Audi",
-      "date": "04.05.12",
-      "model": "RX6",
-      "isSold": false
-    },
-    {
       "name": "Ford",
       "date": "21.06.19",
       "model": "Mondeo",
-      "isSold": false,
+      "isSold": true,
       "id": 6
     },
     {
-      "name": "1",
+      "name": "BMW",
       "date": "21.06.19",
-      "model": "1",
+      "model": "X1",
       "isSold": false,
-      "id": 7
-    },
-    {
-      "name": "car",
-      "date": "21.06.19",
-      "model": "car",
-      "isSold": false,
-      "id": 8
+      "id": 9
     }
   ]
 }
